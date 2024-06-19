@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpinteria Banat - Contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Box Icons Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <a href="index_es.html" class="logo"><img src="img/logo.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar" id="navbar">
+            <li><a href="index_es.html">Página principal</a></li>
+            <li><a href="about_es.html">Sobre nosotros</a></li>
+            <li><a href="catalog_es.html">Catalog</a></li>
+            <li><a href="offers_es.html">Ofertas</a></li>
+            <li><a href="contact_es.html">Contacto</a></li>
+            <button id="flag-button" onclick="toggleLanguage()"></button>
+        </ul>
+    </header>
+    <!-- Main Section -->
+    <section class="contact">
+        <div class="contactContent">
+            <h2 style="margin-top: 30px;">Contacta con nosotros</h2>
+            <p>Llámanos o déjanos un correo con respecto a tu pedido de muebles deseado.</p>
+        </div>
+        <div class="contactContainer">
+            <div class="contactInfo">
+                <div class="contactBox">
+                    <div class="icon">
+                        <i class='bx bx-map-pin'></i>
+                    </div>
+                    <div class="text">
+                        <h3>Dirección</h3>
+                        <p>Calle Manigua, 6 - Piso 2 B, <br> Alcala de Henares, Madrid</p>
+                    </div>
+                </div>
+                <div class="contactBox">
+                    <div class="icon">
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>carpbanatesp@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contactBox">
+                    <div class="icon">
+                        <i class='bx bx-phone'></i>
+                    </div>
+                    <div class="text">
+                        <h3>Teléfono</h3>
+                        <p>07376 874 920</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="contactForm">
+                <form id="contact-formES">
+                    <h2>Enviar un mensaje</h2>
+                    <div class="contactInputBox">
+                        <input type="text" name="full_name" id="nameES" required="required">
+                        <span>Nombre Completo</span>
+                    </div>
+                    <div class="contactInputBox">
+                        <input type="email" name="email" id="emailES" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="contactInputBox">
+                        <textarea name="message" id="messageES" required="required"></textarea>
+                        <span>Escribe tu mensaje...</span>
+                    </div>
+                    <div class="contactInputBox">
+                        <input type="submit" id="submitES" value="Enviar">
+                    </div>
+                </form>
+            </div>
+    </section>
+
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script>
+        emailjs.init("Nbz2x6RhA3ylh_Q_n");
+
+        function sendEmail(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("nameES").value;
+            const email = document.getElementById("emailES").value;
+            const message = document.getElementById("messageES").value;
+
+            if (!name || !email || !message) {
+                alert("Por favor completa todos los campos");
+                return;
+            }
+
+            emailjs.send("service_ygxl1bo", "template_rblvt0q", {
+                from_name: name,
+                from_email: email,
+                message: message,
+            })
+                .then(function (response) {
+                    alert("¡Tu mensaje ha sido enviado correctamente!");
+                    document.getElementById("contact-formES").reset();
+                }, function (error) {
+                    alert("¡Oh no! Algo salió mal");
+                });
+        }
+
+        document.getElementById("contact-formES").addEventListener("submit", sendEmail);
+    </script>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-navbar">
+            <ul>
+                <li><a href="index_es.html">Página principal</a></li>
+                <li><a href="about_es.html">Sobre nosotros</a></li>
+                <li><a href="catalog_es.html">Catalog</a></li>
+                <li><a href="offers_es.html">Ofertas</a></li>
+                <li><a href="contact_es.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/your-page" target="_blank"><i class="bx bxl-facebook-square"></i></a>
+            <a href="https://www.instagram.com/your-account" target="_blank"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.youtube.com/your-channel" target="_blank"><i class="bx bxl-youtube"></i></a>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

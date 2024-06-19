@@ -1,0 +1,793 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --main-color: rgba(55, 79, 69, 1);
+    --second-color: #1E3932;
+    --third-color: #006026;
+}
+
+section {
+    padding: 50px 10%;
+}
+
+*::selection {
+    color: #fff;
+    background: var(--main-color);
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 4px 4px rgb(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: var(--third-color);
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: var(--main-color);
+    gap: 1rem;
+    margin-top: 30px;
+}
+
+.home-text {
+    flex: 1 1 17rem;
+}
+
+.home-img {
+    flex: 1 1 17rem;
+}
+
+.home-text span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+}
+
+.home-text h1 {
+    font-size: 3.2rem;
+    color: #ebdbc8;
+    font-weight: bolder;
+}
+
+.home-text h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0.5rem 0 1.4rem;
+}
+
+.btn {
+    padding: 7px 16px;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn:hover {
+    color: var(--main-color);
+    background: #fff;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.heading h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.quality-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.quality-container .box {
+    flex: 1 1 10rem;
+    background: var(--main-color);
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+}
+
+.quality-container .box .box-img {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.quality-container .box .box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.quality-container .box h2 {
+    color: #fff;
+}
+
+.quality-container .box span {
+    color: #fff;
+}
+
+#flag-button {
+    width: 40px;
+    height: 25px;
+    background-size: cover;
+    border: 0;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+#flag-button.spain {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6f/Spain_flag_300.png');
+}
+
+#flag-button.uk {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_the_United_Kingdom_%282-3%29.svg/1024px-Flag_of_the_United_Kingdom_%282-3%29.svg.png');
+}
+
+.testimonialContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.testimonial {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.testimonial .image {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.slide p {
+    padding: 0 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.slide .quote-icon {
+    font-size: 30px;
+    color: #1E3932;
+    margin-bottom: 10px;
+}
+
+.slide .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details .name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.recentlyBuiltContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+}
+
+.recentlyBuilt {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    padding: 50px 0;
+    row-gap: 30px;
+    background-color: var(--main-color);
+    overflow: hidden;
+}
+
+.recentlyBuilt .image {
+    height: 500px;
+    width: 300px;
+    object-fit: cover;
+    box-shadow: 10px 5px 5px #666;}
+
+.recentlyBuilt .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+
+/* Contact Page */
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(../img/contact_bg.jpg);
+    background-size: cover;
+}
+
+.contact .contactContent {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .contactContent h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact .contactContent p {
+    font-weight: 300;
+    color: #fff;
+}
+
+.contactContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contactContainer .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactContainer .contactInfo .contactBox {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contactContainer .contactInfo .contactBox .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.contactContainer .contactInfo .contactBox .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contactContainer .contactInfo .contactBox .text h3 {
+    font-weight: 500;
+    color: #00cb51;
+}
+
+.contactForm {
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .contactInputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .contactInputBox input,
+.contactForm .contactInputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+}
+
+.contactForm .contactInputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .contactInputBox input:focus~span,
+.contactForm .contactInputBox input:valid~span,
+.contactForm .contactInputBox textarea:focus~span,
+.contactForm .contactInputBox textarea:valid~span {
+    color: var(--main-color);
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .contactInputBox input[type="submit"] {
+    width: 100px;
+    background: var(--main-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* About Page */
+
+.about_heading {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.about_heading h1 {
+    font-size: 50px;
+    color: var(--second-color);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.about_heading h1::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #006026;
+
+}
+
+.about_heading p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.about_container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--second-color); /* Add a border between each .about_container except the last one */
+
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.about_content{
+    flex:1;
+}
+
+.about_content h2{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about_content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.about_content .about_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--second-color);
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    transition: 0.3s ease;
+    border-radius: 25px;
+}
+
+.about_content .about_btn:hover {
+    background-color: black;
+}
+
+.about_image {
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about_image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about_image:hover img{
+    transform: scale(1.2);
+}
+
+.about_heading {
+    margin-top: 80px; /* Default margin */
+}
+
+/* Catalog and Offers Sections */
+.catalog_container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    gap: 15px; /* Add gap for spacing */
+}
+
+.catalog_card {
+    width: 270px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 2px solid var(--second-color);
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+}
+
+.catalog_product_image {
+    width: 100%;
+    height: 250px; /* Set a fixed height for the image container */
+    overflow: hidden; /* Hide overflow to ensure images fit within the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.catalog_product_image img {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.catalog_product_image img:hover {
+    transform: scale(1.7);
+}
+
+.catalog_product_info h4 {
+    font-size: 18px;
+    padding: 0 25px;
+    margin-bottom: 10px;
+}
+
+.reserve_button button {
+    width: 100%;
+    padding: 10px;
+    background: var(--second-color);
+    border: 1px solid gray;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-navbar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: var(--second-color);
+}
+
+
+/* Responsive design */
+
+
+@media (max-width: 768px) {
+    .footer-navbar ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .social-links a {
+        margin: 0 5px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .catalog_container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+    .catalog_card {
+        width: 90%; /* Adjust width for small screens */
+    }
+}
+
+
+/* Website Responsive Settings */
+@media only screen and (max-width: 768px) {
+    .about_heading {
+        margin-top: 120px; /* Adjust margin for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .about_heading {
+        margin-top: 160px; /* Further adjust margin for even smaller screens */
+    }
+}
+
+
+@media (max-width: 991px) {
+    .contact {
+        padding: 50px;
+    }
+
+    .contactContainer {
+        flex-direction: column;
+    }
+
+    .contactContainer .contactInfo {
+        margin-bottom: 40px;
+    }
+
+    .contactContainer .contactInfo,
+    .contactForm {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        color: #1E3932;
+        align-items: center; /* Center the items horizontally */
+        padding-bottom: 20px; /* Add padding to the bottom of the menu */
+    }
+
+    .navbar li {
+        margin: 10px 0;
+        width: 100%; /* Full width for centering */
+        text-align: center; /* Center text */
+    }
+
+    .navbar a {
+        color: #1E3932; /* Update link color for better contrast */
+        display: block; /* Ensure anchor tags fill the li element */
+        padding: 10px; /* Add some padding for better touch targets */
+    }
+
+    #flag-button {
+        margin: 10px auto; /* Center the flag button */
+        display: block; /* Ensure it is displayed as a block element */
+    }
+
+    #menu-icon {
+        display: block;
+    }
+}
+
+@media (min-width: 600px) {
+    .testimonial .image {
+        height: 150px;
+        width: 150px;
+    }
+
+    .slide p {
+        padding: 0 100px;
+    }
+}
+
+@media (min-width: 768px) {
+    .testimonial .image {
+        height: 170px;
+        width: 170px;
+    }
+
+    .slide p {
+        padding: 0 120px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .slide p {
+        padding: 0 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about_heading {
+        padding: 0px 20px;
+    }
+    .about_heading h1 {
+        font-size: 36px;
+    }
+
+    .about_heading p {
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+
+    .about_container{
+        padding: 0px;
+    }
+
+    .about {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .about_image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .about_content p{
+        padding: 0px;
+        font-size: 16px;
+    }
+}

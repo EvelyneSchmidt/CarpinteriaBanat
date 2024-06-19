@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpinteria Banat - Página principal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Box Icons Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Swiper.js Link -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+
+</head>
+<body>
+<!-- Navigation Bar -->
+    <header>
+        <a href="index_es.html" class="logo"><img src="img/logo.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar" id="navbar">
+            <li><a href="index_es.html">Página principal</a></li>
+            <li><a href="about_es.html">Sobre nosotros</a></li>
+            <li><a href="catalog_es.html">Catalog</a></li>
+            <li><a href="offers_es.html">Ofertas</a></li>
+            <li><a href="contact_es.html">Contacto</a></li>
+            <button id="flag-button" onclick="toggleLanguage()"></button>
+        </ul>
+    </header>
+    <!-- Main Section -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <span>Bienvenido a la</span>
+            <h1>Carpinteria Banat</h1>
+            <h2>¡La <b>elegancia</b> y la <b>calidad</b> redefinen tu espacio!</h2>
+            <a href="catalog_es.html" class="btn">Navegar por el catálogo</a>
+        </div>
+        <div class="home-img">
+            <img src="img/mob1.jpg" alt="">
+        </div>
+    </section>
+    <section class="quality" id="quality">
+        <div class="heading">
+            <span>Utilizamos madera y materiales de la mejor calidad.</span>
+            <h1>¡Descubre los mejores muebles para ti!</h1>
+        </div>
+        <div class="quality-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/icons/fast-delivery.png" alt="delivery">
+                </div>
+                <h2>Entrega rápida</h2>
+                <span>El producto será entregado lo antes posible después de realizar el pedido.</span>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/icons/assurance.png" alt="delivery">
+                </div>
+                <h2>Calidad garantizada</h2>
+                <span>Todo está fabricado únicamente con materiales de la más alta calidad.</span>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/icons/happy.png" alt="delivery">
+                </div>
+                <h2>Clientes felices</h2>
+                <span>Cada cliente quedó extremadamente satisfecho con nuestros productos.</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="heading" style="background-color: var(--main-color);">
+        <br><br>
+        <h1 style="margin-top: 100px; color: #fff;">Recientemente construido</h1>
+    </div>
+    <section class="recentlyBuiltContainer" style="background-color: var(--main-color);">
+        
+        <div class="recentlyBuilt mySwiper">
+            <div class="recentlyBuiltContent swiper-wrapper">
+                <div class="slide swiper-slide">
+                    <img src="img/recentlybuilt/rec1.jpeg" alt="" class="image">
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="img/recentlybuilt/rec2.jpeg" alt="" class="image">
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="img/recentlybuilt/rec3.jpeg" alt="" class="image">
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="img/recentlybuilt/rec4.jpeg" alt="" class="image">
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="img/recentlybuilt/rec5.jpeg" alt="" class="image">
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="img/recentlybuilt/rec6.jpeg" alt="" class="image">
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="img/recentlybuilt/rec7.jpeg" alt="" class="image">
+                </div>
+            </div>
+            <div class="swiper-button-next" style="color: #fff"></div>
+            <div class="swiper-button-prev" style="color: #fff"></div>
+        </div>
+    </section>
+
+    <div class="heading">
+        <h1 style="margin-top: 100px;">Testimonios de clientes anteriores</h1>
+    </div>
+    <section class="testimonialContainer">
+        <div class="testimonial mySwiper">
+            <div class="testimonialContent swiper-wrapper">
+                <div class="slide swiper-slide">
+                    <img src="img/testimonials/testi1.jpg" alt="" class="image">
+                    <p>
+                        Recientemente amueblé toda mi sala de estar con piezas de esta tienda de muebles, 
+                        ¡y no podría estar más feliz! La calidad de los muebles es excepcional, 
+                        y las opciones de diseño son lo suficientemente diversas como para adaptarse 
+                        a cualquier estilo. Además, el servicio al cliente fue excelente, lo que hizo 
+                        que toda la experiencia de compra fuera muy fácil.
+                    </p>
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+                    <div class="details">
+                        <span class="name">Santiago Navarro Guerrero</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="img/testimonials/testi2.jpeg" alt="" class="image">
+                    <p>
+                        He sido un cliente leal de esta tienda de muebles durante años, y por una buena razón. 
+                        Sus piezas no solo son elegantes y modernas, sino también increíblemente duraderas. 
+                        Desde mi juego de dormitorio hasta mi mesa de comedor, todo lo que he comprado ha superado mis expectativas. 
+                        Recomiendo esta tienda a cualquiera que esté buscando mejorar la decoración de su hogar.
+                    </p>
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+                    <div class="details">
+                        <span class="name">Diego Morales</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="img/testimonials/testi3.jpeg" alt="" class="image">
+                    <p>
+                        Comprar muebles puede ser abrumador, pero esta tienda lo hizo agradable y sin estrés. 
+                        El showroom está bellamente curado, lo que hace fácil imaginar cómo se vería cada pieza en mi hogar. 
+                        El personal era conocedor y servicial, guiándome a través del proceso de selección sin ser insistente. 
+                        Estoy encantado con mis nuevos muebles y definitivamente volveré por más.
+                    </p>
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+                    <div class="details">
+                        <span class="name">Raúl Jiménez Ramírez</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="img/testimonials/testi4.jpeg" alt="" class="image">
+                    <p>
+                        Como diseñadora de interiores, siempre estoy buscando piezas de mobiliario únicas que hagan una declaración en los hogares de mis clientes. 
+                        ¡Esta tienda nunca decepciona! Ofrecen una amplia gama de estilos, desde clásicos hasta contemporáneos, 
+                        asegurando que pueda encontrar algo para cada proyecto. La calidad es inigualable, y mis clientes siempre 
+                        quedan impresionados con el resultado final. ¡Gracias por ser mi destino de muebles de confianza!
+                    </p>
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+                    <div class="details">
+                        <span class="name">Pablo Moreno</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="img/testimonials/testi5.jpg" alt="" class="image">
+                    <p>
+                        Me topé con esta tienda de muebles mientras buscaba un nuevo sofá, y estoy muy contento de haberlo hecho. 
+                        No solo encontré el sofá perfecto para mi sala de estar, sino que también descubrí un tesoro de otras piezas 
+                        de mobiliario que complementaban mi estilo. Los precios son razonables, especialmente considerando la calidad 
+                        de los productos. ¡Definitivamente volveré para más actualizaciones de muebles en el futuro!
+                    </p>
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+                    <div class="details">
+                        <span class="name">Mateo Vargas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next" style="color: var(--main-color)"></div>
+            <div class="swiper-button-prev" style="color: var(--main-color)"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-navbar">
+        <ul>
+            <li><a href="index_es.html">Página principal</a></li>
+            <li><a href="about_es.html">Sobre nosotros</a></li>
+            <li><a href="catalog_es.html">Catalog</a></li>
+            <li><a href="offers_es.html">Ofertas</a></li>
+            <li><a href="contact_es.html">Contacto</a></li>
+        </ul>
+    </div>
+    <div class="social-links">
+        <a href="https://www.facebook.com/your-page" target="_blank"><i class="bx bxl-facebook-square"></i></a>
+        <a href="https://www.instagram.com/your-account" target="_blank"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.youtube.com/your-channel" target="_blank"><i class="bx bxl-youtube"></i></a>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+<!-- Most Wanted -->
